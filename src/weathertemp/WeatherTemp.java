@@ -30,10 +30,22 @@ public class WeatherTemp {
             }
          }        
         avgTemp = totalTemp/j;           
-        return avgTemp;
-        
+        return avgTemp;        
     }   
-    
+   public static double calcMax(double[] temp){
+    double maxTemp=0;
+        
+        for (int i = 0; i < temp.length; i++)
+        {
+              if(temp[i] < 50 && temp[i] > -50)
+              {
+                 if(temp[i]>maxTemp)
+                 maxTemp = temp[i];               
+              }
+         }                   
+        return maxTemp;
+      }  
+     
     public static void main(String[] args) {
         // TODO code application logic here
         double [] temp;
@@ -47,6 +59,7 @@ public class WeatherTemp {
                 temp[i]=input.nextDouble();
             }    
         System.out.println("The average of temperature is "+String.format("%.2f", calcAvg(temp)));  
+        System.out.println("The Maximum temperature recorded is "+ calcMax(temp));    
 
     }      
 }

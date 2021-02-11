@@ -38,7 +38,7 @@ public class WeatherTemp {
         // TODO code application logic here
         double [] temp;
         temp = new double[14];
-        
+        System.out.println("This line was added from Repo"); 
         Scanner input= new Scanner (System.in);
         for (int i = 0; i < temp.length; i++) 
             {
